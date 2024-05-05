@@ -21,8 +21,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 --keeps lines showing below cursor
-vim.opt.scrolloff = 8
-vim.signcolumn = "yes"
+vim.opt.scrolloff = 10
 vim.opt.isfname:append("@-@")
 
 vim.opt.colorcolumn = "80"
