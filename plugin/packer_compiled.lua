@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\Travis C\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["cmake-language-server"] = {
-    loaded = true,
-    path = "C:\\Users\\Travis C\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmake-language-server",
-    url = "https://github.com/cmake-language-server"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "C:\\Users\\Travis C\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
@@ -120,6 +115,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Travis C\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-jdtls"] = {
+    loaded = true,
+    path = "C:\\Users\\Travis C\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-jdtls",
+    url = "https://github.com/mfussenegger/nvim-jdtls"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "C:\\Users\\Travis C\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
@@ -149,6 +149,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Travis C\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  undotree = {
+    loaded = true,
+    path = "C:\\Users\\Travis C\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\undotree",
+    url = "https://github.com/mbbill/undotree"
   },
   ["vim-fugitive"] = {
     loaded = true,
