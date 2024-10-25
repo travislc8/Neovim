@@ -32,7 +32,6 @@ return require('packer').startup(function(use)
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
-    use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
@@ -52,5 +51,5 @@ return require('packer').startup(function(use)
             { 'L3MON4D3/LuaSnip' },
         }
     }
-    use 'mfussenegger/nvim-jdtls'
+    use('mfussenegger/nvim-jdtls')
 end)

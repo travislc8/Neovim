@@ -1,6 +1,7 @@
 local config = {
-    cmd = { 'C:\\Users\\Travis C\\AppData\\Local\\nvim-data\\mason\\bin\\jdtls.cmd' },
-    --cmd = { 'C:\\Users\\Travis C\\.vscode\\extensions\\redhat.java-1.33.0-win32-x64\\server\\bin\\jdtls' },
+    --cmd = { 'C:/Users/Travis C/source/jdt-language-server-1.9.0-202203031534/bin/jdtls.cmd' },
+    cmd = { 'C:\\Users\\Travis C\\AppData\\Local\\nvim-data\\jdtls\\jdtls.cmd' },
+    --cmd = { 'C:\\Users\\Travis C\\AppData\\Local\\nvim-data\\mason\\bin\\jdtls.cmd' },
     root_dir = vim.fs.dirname(vim.fs.find({ 'gradlew', '.git', 'mvnw' }, { upward = true })[1]),
 }
 require('jdtls').start_or_attach(config)
