@@ -14,14 +14,6 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    --use({
-    --'rose-pine/neovim',
-    --as = 'rose-pine' ,
-    --config = function()
-    --  vim.cmd('colorscheme rose-pine')
-    --   end
-    --})
-
     use({
         'bluz71/vim-moonfly-colors',
         as = 'moonfly',
@@ -35,6 +27,7 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
+    use 'mfussenegger/nvim-jdtls'
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
@@ -51,5 +44,7 @@ return require('packer').startup(function(use)
             { 'L3MON4D3/LuaSnip' },
         }
     }
-    use('mfussenegger/nvim-jdtls')
+
+    -- discord rich presence
+    use 'andweeb/presence.nvim'
 end)

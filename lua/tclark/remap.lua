@@ -27,12 +27,14 @@ vim.keymap.set("n", "<leader>w>", "<C-w>30>")
 --Navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+
+--mark navigation
+vim.keymap.set("n", "<leader>m", "`")
+vim.keymap.set("n", "<leader>M", "'")
 
 -- prevents paste overwriting buffer
-vim.keymap.set("x", "<leader>p", "\"_dp")
-vim.keymap.set("x", "<leader>P", "\"_dP")
+vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "<leader>P", "\"_dp")
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
