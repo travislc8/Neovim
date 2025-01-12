@@ -27,6 +27,17 @@ vim.keymap.set("n", "<leader>w>", "<C-w>30>")
 --Navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzz")
+vim.keymap.set("n", "N", "Nzz")
+
+--Quick fix
+vim.keymap.set("n", "<leader>fj", "<cmd>cnext<CR>")
+vim.keymap.set("n", "<leader>fk", "<cmd>cprev<CR>")
+vim.keymap.set("n", "<leader>fo", "<cmd>copen<CR>")
+vim.keymap.set("n", "<leader>fq", "<cmd>cclose<CR>")
+
+--Replace
+vim.keymap.set("n", "<leader>fs", "ggVG:s/")
 
 --mark navigation
 vim.keymap.set("n", "<leader>m", "`")
@@ -49,6 +60,6 @@ local cmp = require('cmp')
 cmp.setup({
     mapping = cmp.mapping.preset.insert({
         -- confirm completion
-        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+        ['<enter>'] = cmp.mapping.confirm({ select = true }),
     }),
 })

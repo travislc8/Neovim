@@ -23,14 +23,14 @@ local config = {
 
         -- 💀
         '-jar',
-        'C:/Users/Travis C/AppData/Local/nvim-data/jdtls/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar',
+        'C:/Users/Travis C/AppData/Local/nvim/jdtls/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar',
         -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                       ^^^^^^^^^^^^^^
         -- Must point to the                                                     Change this to
         -- eclipse.jdt.ls installation                                           the actual version
 
 
         -- 💀
-        '-configuration', 'C:/Users/Travis C/AppData/Local/nvim-data/jdtls/config_win',
+        '-configuration', 'C:/Users/Travis C/AppData/Local/nvim/jdtls/config_win',
         -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        ^^^^^^
         -- Must point to the                      Change to one of `linux`, `win` or `mac`
         -- eclipse.jdt.ls installation            Depending on your system.

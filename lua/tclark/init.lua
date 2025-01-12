@@ -3,22 +3,26 @@ require("tclark.set")
 
 --Transparent background
 vim.g.moonflyTransparent = true
-
+local custom_highlight = vim.api.nvim_create_augroup("CustomHighlight", {})
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "moonfly",
+    callback = function()
+        vim.api.nvim_set_hl(0, "@string.xml", { fg = "#4f6fd0", bold = false })
+        vim.api.nvim_set_hl(0, "@tag.attribute.xml", { fg = "#bfcfff", bold = false })
+        vim.api.nvim_set_hl(0, "@tag.xml", { fg = "#fafada", bold = false })
+    end,
+    group = custom_highlight,
+})
 require 'nvim-treesitter.configs'.setup {
     -- Modules and its options go here
     highlight = { enable = true },
 }
--- changing comment color
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "moonfly",
-    callback = function()
-        vim.api.nvim_set_hl(0, "Comment", { fg = "#137600", bold = false })
-    end,
-    group = custom_highlight,
-})
 
 --color for comments
-vim.cmd [[hi @comment guifg=green]]
+--vim.cmd [[hi @comment guifg=green]]
 
--- spell check
-vim.cmd('set spell spelllang=en_us')
+if vim.g.vscode then
+else
+    -- spell check
+    vim.cmd('set spell spelllang=en_us')
+end
