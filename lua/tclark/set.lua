@@ -15,7 +15,7 @@ vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
-vim.opt.undodir = "C:/Users/Travis C/AppData/Local/nvim/undodir"
+vim.opt.undodir = vim.env.HOME .. "/AppData/Local/nvim/undodir"
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true

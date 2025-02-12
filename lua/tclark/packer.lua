@@ -46,5 +46,5 @@ return require('packer').startup(function(use)
     }
 
     -- discord rich presence
-    use 'andweeb/presence.nvim'
+    -- use 'andweeb/presence.nvim'
 end)

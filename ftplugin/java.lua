@@ -1,6 +1,6 @@
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 
-local workspace_dir = vim.fn.expand('$HOME') .. '/AppData/Local/nvim-data/jdtlsData/' .. project_name
+local workspace_dir = vim.fn.expand('$HOME') .. '/AppData/Local-data/jdtlsData/' .. project_name
 
 local config = {
     cmd = {
@@ -19,14 +19,14 @@ local config = {
 
         -- 💀
         '-jar',
-        vim.fn.expand('$HOME') .. '/AppData/Local/nvim/jdtls/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar',
+        vim.fn.expand('$HOME') .. '/AppData/Local/jdtls/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar',
         -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                       ^^^^^^^^^^^^^^
         -- Must point to the                                                     Change this to
         -- eclipse.jdt.ls installation                                           the actual version
 
 
         -- 💀
-        '-configuration', vim.fn.expand('$HOME') .. '/appData/Local/nvim/jdtls/config_win',
+        '-configuration', vim.fn.expand('$HOME') .. '/appData/Local/jdtls/config_win',
         -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        ^^^^^^
         -- Must point to the                      Change to one of `linux`, `win` or `mac`
         -- eclipse.jdt.ls installation            Depending on your system.
@@ -57,7 +57,7 @@ local config = {
     -- You need to extend the `bundles` with paths to jar files
     -- if you want to use additional eclipse.jdt.ls plugins.
     --
-    -- See https://github.com/mfussenegger/nvim-jdtls#java-debug-installation
+    -- See https://github.com/mfussenegger-jdtls#java-debug-installation
     --
     -- If you don't plan on using the debugger or other eclipse.jdt.ls plugins you can remove this
     init_options = {
