@@ -26,3 +26,5 @@ else
     -- spell check
     vim.cmd('set spell spelllang=en_us')
 end
+
+vim.g.netrw_sort_sequence = "[\\/]$,^\\.,\\.java$,\\.ps1$,\\.bat$,\\.class$,\\.bak$,\\.o$,\\.h$,\\.info$,\\.swp$,\\.obj$"

@@ -10,6 +10,7 @@ vim.keymap.set("n", "<leader>wh", "<C-w>h")
 vim.keymap.set("n", "<leader>wj", "<C-w>j")
 vim.keymap.set("n", "<leader>wk", "<C-w>k")
 vim.keymap.set("n", "<leader>wq", "<C-w>q")
+vim.keymap.set("n", "<leader>ww", "<cmd>noautocmd w<CR>")
 
 vim.keymap.set("n", "<leader>wH", "<C-w>H")
 vim.keymap.set("n", "<leader>wJ", "<C-w>J")
@@ -54,11 +55,12 @@ vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+y")
 
--- quick fix
+-- spell
+vim.keymap.set("n", "<leader>sc", "mc[sz=")
 
 local cmp = require('cmp')
 
---lsp keymappings
+--lsp key mappings
 cmp.setup({
     mapping = cmp.mapping.preset.insert({
         -- confirm completion
