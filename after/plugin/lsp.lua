@@ -16,6 +16,8 @@ vim.keymap.set("n", "<C-h", function() vim.lsp.lsp.signature_help() end, opts)
 vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
 vim.keymap.set("n", "[[", function() vim.diagnostic.goto_next() end, opts)
 vim.keymap.set("n", "]]", function() vim.diagnostic.goto_prev() end, opts)
+vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
+vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
 
 -- to learn how to use mason.nvim with lsp-zero
 -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guide/integrate-with-mason-nvim.md
