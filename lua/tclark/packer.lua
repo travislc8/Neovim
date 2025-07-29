@@ -53,4 +53,10 @@ return require('packer').startup(function(use)
         }
     }
     use('mfussenegger/nvim-jdtls')
+    use {
+        "supermaven-inc/supermaven-nvim",
+        config = function()
+            require("supermaven-nvim").setup({})
+        end,
+    }
 end)
