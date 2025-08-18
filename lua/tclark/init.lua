@@ -2,6 +2,9 @@ require("tclark.remap")
 require("tclark.set")
 require("tclark.dap")
 require("tclark.tabline")
+require("tclark.lsp")
+require("tclark.cmp")
+--require("tclark.mason")
 
 local custom_highlight = vim.api.nvim_create_augroup("CustomHighlight", {})
 vim.api.nvim_create_autocmd("ColorScheme", {
@@ -27,3 +30,4 @@ else
     vim.cmd('set spell spelllang=en_us')
 end
 
+vim.g.moonflyTransparent = true

@@ -84,17 +84,6 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 -- spell
 vim.keymap.set("n", "<leader>sc", "mc[sz=")
-
-local cmp = require('cmp')
-
---lsp key mappings
-cmp.setup({
-    mapping = cmp.mapping.preset.insert({
-        -- confirm completion
-        ['<enter>'] = cmp.mapping.confirm({ select = true }),
-    }),
-})
-
 -- debug
 vim.keymap.set("n", "<F5>", ":lua require('dap').continue()<CR>")
 vim.keymap.set("n", "<F10>", ":lua require('dap').step_over()<CR>")
