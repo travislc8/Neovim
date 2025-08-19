@@ -39,23 +39,6 @@ return require('packer').startup(function(use)
         branch = "harpoon2",
         requires = { { "nvim-lua/plenary.nvim" } }
     }
-    use('mason-org/mason.nvim')
-    use('mason-org/mason-lspconfig.nvim')
-
-    use('neovim/nvim-lspconfig')
-    use {
-        'hrsh7th/nvim-cmp',
-        requires = {
-            'hrsh7th/cmp-nvim-lsp',      -- LSP source
-            'hrsh7th/cmp-buffer',        -- Buffer source
-            'hrsh7th/cmp-path',          -- Path source
-            'hrsh7th/cmp-cmdline',       -- Cmdline source
-            'L3MON4D3/LuaSnip',          -- Snippet engine
-            'saadparwaiz1/cmp_luasnip',  -- Snippet source for nvim-cmp
-        }
-    }
-    use( 'hrsh7th/cmp-nvim-lsp' )
-    use( 'L3MON4D3/LuaSnip' )
 
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
@@ -68,4 +51,20 @@ return require('packer').startup(function(use)
             require("supermaven-nvim").setup({})
         end,
     }
+    use('mason-org/mason-lspconfig.nvim')
+        use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v3.x',
+        requires = {
+            { 'williamboman/mason.nvim' },
+            { 'williamboman/mason-lspconfig.nvim' },
+            -- LSP Support
+            { 'neovim/nvim-lspconfig' },
+            -- Autocompletion
+            { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'L3MON4D3/LuaSnip' },
+        }
+    }
+
 end)

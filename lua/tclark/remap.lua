@@ -99,3 +99,12 @@ vim.keymap.set("n", "<leader>dl", ":lua require('dap').run_last()<CR>")
 vim.keymap.set("n", "<leader>dc", ":lua require('dap').close()<CR> :lua require('dapui').close()<CR>")
 
 
+local cmp = require('cmp')
+
+--lsp key mappings
+cmp.setup({
+    mapping = cmp.mapping.preset.insert({
+        -- confirm completion
+        ['<enter>'] = cmp.mapping.confirm({ select = true }),
+    }),
+})
