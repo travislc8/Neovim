@@ -3,7 +3,7 @@ local dapui = require('dapui')
 
 dap.adapters.coreclr = {
   type = 'executable',
-  command = '/home/travis/.config/nvim/netcoredbg/netcoredbg',
+  command = vim.fn.expand('$HOME') .. '/bin/netcoredbg/netcoredbg',
   args = {'--interpreter=vscode'}
 }
 
@@ -17,7 +17,7 @@ dap.configurations.cs = {
         return last_dll_path
       end
       last_dll_path = vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/', 'file')
-      return last_dll_path    
+      return last_dll_path
   end,
   },
 }

@@ -16,11 +16,13 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
 vim.opt.undodir = vim.env.HOME .. "/AppData/Local/nvim/undodir"
+--vim.opt.shell = "pwsh"
+--vim.opt.shellcmdflag = "-Command"
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
-vim.termguicolors = true
+vim.opt.termguicolors = true
 
 --keeps lines showing below cursor
 vim.opt.scrolloff = 10

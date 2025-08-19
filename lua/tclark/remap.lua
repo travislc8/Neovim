@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>pr", "<cmd>!./run.sh<CR>")
+vim.keymap.set("n", "<leader>pr", "<cmd>!pwsh ./run.ps1<CR>")
 
 --window control
 vim.keymap.set("n", "<leader>wn", "<C-w>n")
@@ -57,9 +57,9 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+y")
 
 -- tabs
-vim.keymap.set("n", "<leader>tn", ":tabnew<CR>")
-vim.keymap.set("n", "<leader>tl", ":tabnext<CR>")
-vim.keymap.set("n", "<leader>th", ":tabprevious<CR>")
+vim.keymap.set("n", "<C-t>n", ":tabnew<CR>")
+vim.keymap.set("n", "<C-t>h", ":tabnext<CR>")
+vim.keymap.set("n", "<C-t>l", ":tabprevious<CR>")
 vim.keymap.set("n", "<C-t>1", ":tabn 1<CR>")
 vim.keymap.set("n", "<C-t>2", ":tabn 2<CR>")
 vim.keymap.set("n", "<C-t>3", ":tabn 3<CR>")
@@ -80,7 +80,7 @@ vim.keymap.set("t", "<C-t>8", "<C-\\><C-n>:tabn 8<CR>")
 vim.keymap.set("t", "<C-t>9", "<C-\\><C-n>:tabn 9<CR>")
 
 -- terminal
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
 
 -- spell
 vim.keymap.set("n", "<leader>sc", "mc[sz=")
