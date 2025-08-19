@@ -51,20 +51,19 @@ return require('packer').startup(function(use)
             require("supermaven-nvim").setup({})
         end,
     }
-    use('mason-org/mason-lspconfig.nvim')
-        use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v3.x',
-        requires = {
-            { 'williamboman/mason.nvim' },
-            { 'williamboman/mason-lspconfig.nvim' },
-            -- LSP Support
-            { 'neovim/nvim-lspconfig' },
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },
-            { 'hrsh7th/cmp-nvim-lsp' },
-            { 'L3MON4D3/LuaSnip' },
-        }
-    }
-
+    use('neovim/nvim-lspconfig')
+    use( 'hrsh7th/cmp-nvim-lsp')
+    use( 'hrsh7th/cmp-buffer')
+    use( 'hrsh7th/cmp-path')
+    use( 'hrsh7th/cmp-cmdline')
+    use( 'hrsh7th/nvim-cmp')
+    use( 'hrsh7th/cmp-vsnip')
+    use( 'hrsh7th/vim-vsnip')
+    --use('mason-org/mason-lspconfig.nvim')
+    --use { 'williamboman/mason.nvim' }
+    --use { 'williamboman/mason-lspconfig.nvim' }
+    -- Autocompleti
+    --use { 'hrsh7th/nvim-cmp' }
+    --use { 'hrsh7th/cmp-nvim-lsp' }
+    --use { 'L3MON4D3/LuaSnip' }
 end)

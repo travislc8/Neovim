@@ -97,14 +97,3 @@ vim.keymap.set("n", "<leader>lp", ":lua require('dap').set_breakpoint(nil, nil, 
 vim.keymap.set("n", "<leader>dr", ":lua require('dap').repl.open()<CR>")
 vim.keymap.set("n", "<leader>dl", ":lua require('dap').run_last()<CR>")
 vim.keymap.set("n", "<leader>dc", ":lua require('dap').close()<CR> :lua require('dapui').close()<CR>")
-
-
-local cmp = require('cmp')
-
---lsp key mappings
-cmp.setup({
-    mapping = cmp.mapping.preset.insert({
-        -- confirm completion
-        ['<enter>'] = cmp.mapping.confirm({ select = true }),
-    }),
-})
