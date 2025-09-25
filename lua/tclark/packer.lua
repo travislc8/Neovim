@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
 
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
-    use 'mfussenegger/nvim-dap'
+    use('mfussenegger/nvim-dap')
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
 
     use {
@@ -59,6 +59,7 @@ return require('packer').startup(function(use)
     use( 'hrsh7th/nvim-cmp')
     use( 'hrsh7th/cmp-vsnip')
     use( 'hrsh7th/vim-vsnip')
+    use('mason-org/mason.nvim')
     --use('mason-org/mason-lspconfig.nvim')
     --use { 'williamboman/mason.nvim' }
     --use { 'williamboman/mason-lspconfig.nvim' }

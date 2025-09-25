@@ -1,26 +1,35 @@
 local dap = require('dap')
 local dapui = require('dapui')
 
-dap.adapters.coreclr = {
+dap.adapters.netcoredbg = {
   type = 'executable',
-  command = vim.fn.expand('$HOME') .. '/bin/netcoredbg/netcoredbg',
-  args = {'--interpreter=vscode'}
+  command = 'netcoredbg',
+  args = {'--interpreter=vscode --log'}
 }
 
+local last_dll_path = nil
 dap.configurations.cs = {
   {
-    type = "coreclr",
+    type = "netcoredbg",
     name = "launch - netcoredbg",
     request = "launch",
-    program = function()
-      if last_dll_path and vim.fn.filereadable(last_dll_path) == 1 then
+    program = function() ok, result = pcall(function()
+        local cwd = vim.fn.getcwd()
+        if last_dll_path and vim.fn.filereadable(last_dll_path) == 1 then
+            return last_dll_path
+        end
+        last_dll_path = vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '\\bin\\Debug\\', 'file')
         return last_dll_path
-      end
-      last_dll_path = vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/', 'file')
-      return last_dll_path
-  end,
+    end)
+    if not ok then
+        print('failed to get dll path')
+        return nul
+    end
+    return result
+    end
   },
 }
+
 
 dapui.setup()
 
